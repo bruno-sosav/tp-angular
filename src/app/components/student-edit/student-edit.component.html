@@ -1,0 +1,95 @@
+<div class="edit-card">
+  <div class="card-header">
+    <h5>Detalles del Estudiante</h5>
+  </div>
+  <div class="card-body">
+    
+    <!-- Vista de solo lectura -->
+    <div *ngIf="!editando">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">ID</label>
+          <div class="form-input">{{ student.id }}</div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">DNI</label>
+          <div class="form-input">{{ student.dni }}</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Apellido</label>
+          <div class="form-input">{{ student.lastName }}</div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Nombre</label>
+          <div class="form-input">{{ student.firstName }}</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <div class="form-input">{{ student.email }}</div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Cohorte</label>
+          <div class="form-input">{{ student.cohort || 'No especificado' }}</div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" (click)="iniciarEdicion()">
+          Editar
+        </button>
+        <button class="btn btn-secondary" (click)="cancelarEdicion()">
+          Cerrar
+        </button>
+      </div>
+    </div>
+
+    <!-- Vista de edición -->
+    <div *ngIf="editando">
+      <form (ngSubmit)="guardarCambios()">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">DNI</label>
+            <input type="text" class="form-control" 
+                   [(ngModel)]="studentEditado.dni" name="dni" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Apellido</label>
+            <input type="text" class="form-control" 
+                   [(ngModel)]="studentEditado.lastName" name="lastName" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" 
+                   [(ngModel)]="studentEditado.firstName" name="firstName" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" 
+                   [(ngModel)]="studentEditado.email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success">Guardar</button>
+          <button type="button" class="btn btn-secondary" (click)="cancelarEdicion()">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

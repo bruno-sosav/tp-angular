@@ -1,0 +1,38 @@
+.table-container {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.students-table {
+  width: 100%;
+  background: var(--bg-secondary);
+}
+
+.students-table th {
+  background: var(--bg-card);
+  color: var(--accent-primary);
+  font-weight: 500;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.students-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.students-table tr:last-child td {
+  border-bottom: none;
+}
+
+.students-table tr:hover {
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.selected-student {
+  background: rgba(0, 212, 255, 0.1) !important;
+  border-left: 3px solid var(--accent-primary);
+}

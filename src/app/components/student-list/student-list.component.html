@@ -1,0 +1,66 @@
+<div class="app-container">
+  <!-- Header -->
+  <header class="app-header">
+    <h1 class="app-title">Gestión de Estudiantes</h1>
+    <p class="app-subtitle">Sistema administrativo académico</p>
+  </header>
+
+  <!-- Formulario para agregar estudiante -->
+  <section class="section-card">
+    <h2 class="section-title">Agregar Estudiante</h2>
+    <app-student-form (studentAdded)="onStudentAdded()"></app-student-form>
+  </section>
+
+  <!-- Lista de estudiantes -->
+  <section class="section-card">
+    <h2 class="section-title">Estudiantes Registrados</h2>
+    
+    <div class="table-container">
+      <table class="students-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students" 
+              (click)="selectStudent(student)"
+              [class.selected-student]="selectedStudent?.id === student.id"
+              class="table-row">
+            <td>{{ student.id }}</td>
+            <td>{{ student.dni }}</td>
+            <td>{{ student.lastName }}</td>
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.email }}</td>
+            <td class="actions">
+              <button class="btn btn-danger btn-icon" 
+                      (click)="deleteStudent(student.id!); $event.stopPropagation()">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="students.length === 0">
+            <td colspan="6" class="no-data text-center">
+              No hay estudiantes registrados
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Edición de estudiante -->
+  <div *ngIf="selectedStudent" class="section-card">
+    <h2 class="section-title">Editar Estudiante</h2>
+    <app-student-edit 
+      [student]="selectedStudent"
+      (studentUpdated)="onStudentUpdated()"
+      (cancelEdit)="selectedStudent = undefined">
+    </app-student-edit>
+  </div>
+</div>

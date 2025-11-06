@@ -1,0 +1,52 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "dni": "45923138",
+      "firstName": "Bruno",
+      "lastName": "Villamón",
+      "email": "bsosavillamon@gmail.com",
+      "cohort": "2024A",
+      "status": "activo",
+      "gender": "masculino",
+      "address": "Calle 123, Mdp",
+      "phone": "123-456-7890"
+    },
+    {
+      "id": "2",
+      "dni": "35456789",
+      "firstName": "Miguel",
+      "lastName": "Fernandez",
+      "email": "mfernandez@email.com",
+      "cohort": "2024B",
+      "status": "activo",
+      "gender": "masculino",
+      "address": "constitucion 5888, La Plata",
+      "phone": "098-765-4321"
+    },
+    {
+      "id": "3",
+      "dni": "28987654",
+      "firstName": "Ana",
+      "lastName": "Martinez",
+      "email": "anamartinez@email.com",
+      "cohort": "2024A",
+      "status": "inactivo",
+      "gender": "femenino",
+      "address": "Calle 223, Miramar",
+      "phone": "555-123-4567"
+    },
+    {
+      "id": "4",
+      "dni": "42345678",
+      "firstName": "Carlitos",
+      "lastName": "bala",
+      "email": "carlos.bala@email.com",
+      "cohort": "2024C",
+      "status": "activo",
+      "gender": "masculino",
+      "address": "Alem 1234, Balcarce",
+      "phone": "444-987-6543"
+    }
+  ]
+}
