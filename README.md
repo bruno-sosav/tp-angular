@@ -1,112 +1,98 @@
-🎓 Sistema de Gestión de Estudiantes - Angular
-Una aplicación web moderna desarrollada en Angular para la gestión completa de estudiantes, con diseño glassmorphism y funcionalidades CRUD.
+# 🎓 Sistema de Gestión Académica - Angular
 
-✨ Características
-🚀 Diseño Moderno: Interfaz con efectos glassmorphism
+Una aplicación web desarrollada en Angular para la administración completa de estudiantes, con interfaz minimalista y operaciones CRUD.
 
-📱 Responsive: Adaptable a todos los dispositivos
+## ✨ Características Principales
 
-🎯 CRUD Completo: Crear, Leer, Actualizar y Eliminar estudiantes
+- **🖥️ Interfaz Minimalista**: Diseño limpio y moderno con paleta de colores negro y celeste
+- **📱 Diseño Responsive**: Compatible con dispositivos móviles y tablets
+- **🔧 CRUD Completo**: Crear, visualizar, editar y eliminar registros de estudiantes
+- **⚡ Angular 17**: Desarrollado con la última versión del framework
+- **🎨 Estilo Visual**: Tipografía clara, espacios bien definidos y efectos sutiles
+- **📊 Backend Simulado**: JSON Server para desarrollo y testing
 
-⚡ Angular 17: Desarrollado con la última versión de Angular
+## 🛠️ Stack Tecnológico
 
-🎨 Estilo Visual: Gradientes, animaciones y fuentes modernas
+- **Frontend**: Angular 17, TypeScript, HTML5, CSS3
+- **Estilos**: CSS Variables, Diseño minimalista, Animaciones CSS
+- **API**: JSON Server para simulación de backend
+- **Fuentes**: Google Fonts (Inter)
+- **Iconografía**: Emojis para mejor experiencia visual
 
-📊 JSON Server: API simulada para desarrollo
+## 🚀 Configuración y Ejecución
 
-🛠️ Tecnologías Utilizadas
-Frontend: Angular 17, TypeScript, HTML5, CSS3
+### Prerrequisitos
+- Node.js (versión 18 o superior)
+- npm
+- Git
 
-Estilos: Glassmorphism, Gradientes, Animaciones CSS
+### Instalación
 
-API: JSON Server (simulación)
+```bash
+# Clonar el repositorio
+git clone https://github.com/bruno-sosav/tp-angular.git
 
-Fuentes: Google Fonts (Inter, Poppins)
+# Navegar al directorio
+cd tp-angular
 
-Iconos: Emojis y elementos visuales modernos
-
-🚀 Instalación y Ejecución
-Prerrequisitos
-Node.js (versión 18 o superior)
-
-npm o yarn
-
-Clonar el repositorio
-
-git clone https://github.com/FrancoChocou/TPAngularFinalizado.git
-
-cd TPAngularFinalizado
-
-Instalar dependencias
-
+# Instalar dependencias
 npm install
+```
 
-Ejecutar JSON Server (Terminal 1)
+### Ejecución
 
-json-server --watch db.json --port 3001
+```bash
+# Terminal 1 - Servidor de datos
+npx json-server --watch db.json --port 3001
 
-Ejecutar Angular (Terminal 2)
-
+# Terminal 2 - Servidor de Angular
 ng serve
 
-📋 Funcionalidades Implementadas
+# La aplicación estará disponible en: http://localhost:4200
+```
 
-✅ Completadas
+## 📋 Funcionalidades Implementadas
 
-Lista de estudiantes con diseño moderno
+### ✅ Completadas
+- Listado de estudiantes con diseño minimalista
+- Formulario de registro de nuevos estudiantes
+- Edición en tiempo real de información estudiantil
+- Eliminación segura con diálogo de confirmación
+- Interfaz adaptable a diferentes tamaños de pantalla
+- Validación de campos obligatorios
+- Manejo robusto de errores
+- API REST simulada para desarrollo
 
-Formulario para agregar nuevos estudiantes
+## 🎯 Estructura de Datos
 
-Edición en línea de estudiantes existentes
+Cada estudiante contiene:
+- **DNI** (Documento Nacional de Identidad)
+- **Nombre** y **Apellido**
+- **Correo Electrónico**
+- **Cohorte** (Promoción o generación)
+- **Estado** académico
+- **Género**
+- **Dirección** personal
+- **Teléfono** de contacto
 
-Eliminación de estudiantes con confirmación
+## 🎨 Características de Diseño
 
-Diseño responsive y glassmorphism
+- **Minimalismo**: Espacios limpios y contenido bien organizado
+- **Paleta de Colores**: Negro como base con acentos celestes
+- **Tipografía**: Fuente Inter para máxima legibilidad
+- **Navegación Intuitiva**: Flujo claro entre secciones
+- **Feedback Visual**: Estados interactivos bien definidos
+- **Accesibilidad**: Contraste adecuado y navegación por teclado
 
-Validación de formularios
+## 👨‍💻 Autor
 
-Manejo de errores
+**Bruno Villamón**  
+GitHub: [@bruno-sosav](https://github.com/bruno-sosav)
 
-API simulada con JSON Server
+## 📄 Licencia
 
-🎯 Campos del Estudiante
+Este proyecto es de código abierto y se distribuye bajo la Licencia MIT.
 
-DNI (Documento de identidad)
+---
 
-Nombre y Apellido
-
-Email
-
-Cohort (Promoción)
-
-Estado (Activo/Inactivo)
-
-Género
-
-Dirección
-
-Teléfono
-
-🎨 Características de Diseño
-
-Glassmorphism: Efectos de vidrio esmerilado
-
-Gradientes: Fondos con degradados modernos
-
-Animaciones: Transiciones suaves y efectos hover
-
-Fuentes: Inter y Poppins de Google Fonts
-
-Colores: Palette profesional con buen contraste
-
-👨‍💻 Autor
-
-Franco Chocou
-
-GitHub: @FrancoChocou
-
-📄 Licencia
-
-Este proyecto es de código abierto y está disponible bajo la MIT License.
-
-Proyecto desarrollado como trabajo práctico de Angular.
+*Desarrollado como trabajo práctico de Angular - Gestión de Estudiantes*
